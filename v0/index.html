@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Career Blueprint - Launch Your Data Analytics Career</title>
+    <meta name="description"
+        content="Learn how to land a $90K+ Data Analytics Job without a degree or tech background. Join 80,000+ in the Data in Motion community.">
+
+    <!-- TailwindCSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Inter', '-apple-system', 'BlinkMacSystemFont', 'SF Pro Display', 'Segoe UI', 'system-ui', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            orange: '#c87b11',
+                            green: '#126d2c',
+                            purple: '#6336b6',
+                            red: '#a73c3d',
+                            blue: '#39b2f9',
+                            darkblue: '#004aaf',
+                        }
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.8s ease-out forwards',
+                        'slide-up': 'slideUp 0.6s ease-out forwards',
+                        'slide-in': 'slideIn 0.8s ease-out forwards',
+                        'scroll': 'scroll 40s linear infinite',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideUp: {
+                            '0%': { opacity: '0', transform: 'translateY(30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        slideIn: {
+                            '0%': { opacity: '0', transform: 'translateX(-30px)' },
+                            '100%': { opacity: '1', transform: 'translateX(0)' },
+                        },
+                        scroll: {
+                            '0%': { transform: 'translateX(0)' },
+                            '100%': { transform: 'translateX(-50%)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', system-ui, sans-serif;
+            background: #0f0f0f;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #1a0f0f 0%, #2d1a1a 50%, #1a0f0f 100%);
+        }
+
+        .dark-card {
+            background: rgba(30, 20, 20, 0.6);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(167, 60, 61, 0.2);
+        }
+
+        .light-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .hover-lift {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .hover-lift:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(167, 60, 61, 0.3);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #a73c3d 0%, #c87b11 100%);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .btn-primary:hover::before {
+            left: 100%;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 30px rgba(167, 60, 61, 0.5);
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        .float {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .feature-icon {
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover .feature-icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .logo-scroll-container {
+            overflow: hidden;
+            background: linear-gradient(135deg, #2d1a1a 0%, #3d2a2a 100%);
+        }
+
+        .logo-scroll {
+            display: flex;
+            animation: scroll 40s linear infinite;
+        }
+
+        .logo-scroll:hover {
+            animation-play-state: paused;
+        }
+
+        .logo-scroll img {
+            filter: brightness(0) invert(1);
+            opacity: 0.9;
+            transition: opacity 0.3s ease;
+        }
+
+        .logo-scroll img:hover {
+            opacity: 1;
+        }
+
+        .testimonial-card {
+            transition: all 0.4s ease;
+            border: 2px solid transparent;
+        }
+
+        .testimonial-card:hover {
+            border-color: #a73c3d;
+            transform: scale(1.03);
+        }
+
+        .stat-number {
+            background: linear-gradient(135deg, #c87b11 0%, #a73c3d 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(167, 60, 61, 0.3), transparent);
+        }
+
+        .loom-embed {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 1.5rem;
+        }
+
+        .loom-embed iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .loom-embed-vertical {
+            position: relative;
+            padding-bottom: 177.78%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 1.5rem;
+        }
+
+        .loom-embed-vertical iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .testimonial-image {
+            width: 100%;
+            height: auto;
+            border-radius: 1.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .testimonial-image:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 40px rgba(167, 60, 61, 0.4);
+        }
+    </style>
+</head>
+
+<body class="text-gray-100">
+
+    <!-- Section 1: Hero -->
+    <section class="relative min-h-screen gradient-bg overflow-hidden">
+        <div class="absolute inset-0 opacity-5">
+            <div class="absolute top-20 left-20 w-72 h-72 bg-brand-red rounded-full blur-3xl"></div>
+            <div class="absolute bottom-20 right-20 w-96 h-96 bg-brand-orange rounded-full blur-3xl"></div>
+        </div>
+
+        <div class="relative max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 pt-20 pb-32">
+            <!-- Navigation -->
+            <nav class="flex justify-between items-center mb-20 animate-fade-in">
+                <div class="text-white text-2xl font-black tracking-tight">
+                    Data in Motion
+                </div>
+                <button onclick="scrollToApply()"
+                    class="btn-primary px-8 py-3 rounded-full text-white font-bold text-sm shadow-lg">
+                    Apply Now
+                </button>
+            </nav>
+
+            <!-- Hero Content -->
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="text-white space-y-8 animate-slide-in">
+                    <h1 class="text-5xl sm:text-6xl lg:text-7xl font-black leading-tight">
+                        How I Landed a <span class="text-brand-orange">$90K+</span> Data Analytics Job
+                    </h1>
+                    <p class="text-xl sm:text-2xl font-medium text-gray-300 leading-relaxed">
+                        Without a Degree or Tech Background
+                    </p>
+                    <p class="text-lg sm:text-xl text-gray-400 leading-relaxed max-w-2xl">
+                        Learn the exact roadmap I used to go from delivering pizzas to working as a professional data
+                        analyst, and how you can do the same in under 6 months.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                        <button onclick="scrollToApply()"
+                            class="btn-primary px-10 py-5 rounded-full text-white font-bold text-lg shadow-2xl">
+                            Apply Now →
+                        </button>
+                        <div class="flex items-center gap-3 text-white">
+                            <div class="flex -space-x-2">
+                                <img src="pplimgs/Hakeem.webp" alt="Community member"
+                                    class="w-12 h-12 rounded-full border-2 border-gray-800 object-cover">
+                                <img src="pplimgs/Larita.webp" alt="Community member"
+                                    class="w-12 h-12 rounded-full border-2 border-gray-800 object-cover">
+                                <img src="pplimgs/Kerristen.webp" alt="Community member"
+                                    class="w-12 h-12 rounded-full border-2 border-gray-800 object-cover">
+                            </div>
+                            <span class="text-sm font-semibold">80,000+ in the community</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Main Video -->
+                <div class="relative float">
+                    <div class="loom-embed shadow-2xl">
+                        <iframe
+                            src="https://www.loom.com/embed/92396bfd470f4bbf805bfa5f57b72307?hide_owner=true&hide_share=true&hide_title=true&hideEmbedTopBar=true"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Wave Divider -->
+        <div class="absolute bottom-0 left-0 right-0">
+            <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M0 120L60 110C120 100 240 80 360 70C480 60 600 60 720 65C840 70 960 80 1080 85C1200 90 1320 90 1380 90L1440 90V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z"
+                    fill="#0f0f0f" />
+            </svg>
+        </div>
+    </section>
+
+    <!-- Section 2: Industry Salary Statistics -->
+    <section class="py-24 bg-[#0f0f0f]">
+        <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+            <div class="text-center mb-16 animate-slide-up">
+                <h2 class="text-4xl sm:text-5xl font-black mb-4 text-white">Industry Salary Statistics</h2>
+                <p class="text-xl text-gray-400">High-paying opportunities are waiting for you</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="light-card rounded-3xl p-8 shadow-lg hover-lift text-center">
+                    <div class="text-5xl font-black stat-number mb-2">$78K</div>
+                    <div class="text-lg font-bold text-gray-700">Data Analyst</div>
+                </div>
+                <div class="light-card rounded-3xl p-8 shadow-lg hover-lift text-center">
+                    <div class="text-5xl font-black stat-number mb-2">$102K</div>
+                    <div class="text-lg font-bold text-gray-700">BI Developer</div>
+                </div>
+                <div class="light-card rounded-3xl p-8 shadow-lg hover-lift text-center">
+                    <div class="text-5xl font-black stat-number mb-2">$85K</div>
+                    <div class="text-lg font-bold text-gray-700">Business Analyst</div>
+                </div>
+                <div class="light-card rounded-3xl p-8 shadow-lg hover-lift text-center">
+                    <div class="text-5xl font-black stat-number mb-2">$118K</div>
+                    <div class="text-lg font-bold text-gray-700">Analytics Engineer</div>
+                </div>
+            </div>
+
+            <p class="text-center text-sm text-gray-500 mt-8">Source: Industry salary data 2025</p>
+        </div>
+    </section>
+
+    <!-- Section 3: Logo Grid - Companies -->
+    <section class="py-20 bg-[#0f0f0f]">
+        <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 mb-12">
+            <h2 class="text-4xl sm:text-5xl font-black text-center mb-4 text-white">Graduates Landed Roles At</h2>
+            <p class="text-xl text-gray-400 text-center">Join professionals working at top companies</p>
+        </div>
+
+        <div class="logo-scroll-container py-16">
+            <div class="logo-scroll">
+                <!-- First set of logos -->
+                <div class="flex items-center gap-16 px-8 min-w-max">
+                    <img src="logogrid/slder1.png" alt="Company logos" class="h-16 object-contain">
+                    <img src="logogrid/slder2.png" alt="Company logos" class="h-16 object-contain">
+                    <img src="logogrid/Slder3.png" alt="Company logos" class="h-16 object-contain">
+                </div>
+                <!-- Duplicate set for seamless loop -->
+                <div class="flex items-center gap-16 px-8 min-w-max">
+                    <img src="logogrid/slder1.png" alt="Company logos" class="h-16 object-contain">
+                    <img src="logogrid/slder2.png" alt="Company logos" class="h-16 object-contain">
+                    <img src="logogrid/Slder3.png" alt="Company logos" class="h-16 object-contain">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Why Join the Program -->
+    <section class="py-24 bg-[#0f0f0f]">
+        <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl sm:text-5xl font-black mb-4 text-white">Why Join the Data Career Launch Program</h2>
+                <p class="text-xl text-gray-400">Everything you need to break into data analytics</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                <!-- Feature 1 -->
+                <div class="feature-card dark-card rounded-3xl p-8 shadow-lg hover-lift">
+                    <div
+                        class="feature-icon w-16 h-16 bg-gradient-to-br from-brand-red to-brand-orange rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-black mb-3 text-white">Build In-Demand Skills</h3>
+                    <p class="text-gray-400 leading-relaxed">Learn Excel, SQL, Tableau, Python, and data storytelling
+                        through hands-on, real-world projects.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="feature-card dark-card rounded-3xl p-8 shadow-lg hover-lift">
+                    <div
+                        class="feature-icon w-16 h-16 bg-gradient-to-br from-brand-red to-brand-orange rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-black mb-3 text-white">Unlimited 1:1 Coaching</h3>
+                    <p class="text-gray-400 leading-relaxed">Work with real data professionals who've been where you are
+                        and know how to get you hired.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="feature-card dark-card rounded-3xl p-8 shadow-lg hover-lift">
+                    <div
+                        class="feature-icon w-16 h-16 bg-gradient-to-br from-brand-red to-brand-orange rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-black mb-3 text-white">Get Paid More</h3>
+                    <p class="text-gray-400 leading-relaxed">We'll help you break into data analytics and unlock
+                        higher-paying opportunities.</p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="feature-card dark-card rounded-3xl p-8 shadow-lg hover-lift">
+                    <div
+                        class="feature-icon w-16 h-16 bg-gradient-to-br from-brand-red to-brand-orange rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-black mb-3 text-white">Analytics Internship</h3>
+                    <p class="text-gray-400 leading-relaxed">Add real-world experience to your resume and LinkedIn. Even
+                        if you're brand new to the field.</p>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="feature-card dark-card rounded-3xl p-8 shadow-lg hover-lift">
+                    <div
+                        class="feature-icon w-16 h-16 bg-gradient-to-br from-brand-red to-brand-orange rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-black mb-3 text-white">Fast-Track to Interviews</h3>
+                    <p class="text-gray-400 leading-relaxed">Gain the brand, confidence, and experience to land
+                        interviews at top companies in less than 6 months.</p>
+                </div>
+
+                <!-- Feature 6 -->
+                <div class="feature-card dark-card rounded-3xl p-8 shadow-lg hover-lift">
+                    <div
+                        class="feature-icon w-16 h-16 bg-gradient-to-br from-brand-red to-brand-orange rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-black mb-3 text-white">Lifetime Support</h3>
+                    <p class="text-gray-400 leading-relaxed">We work with you until you land a job and afterward.
+                        Continue to upskill with our platform.</p>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <button onclick="scrollToApply()"
+                    class="btn-primary px-12 py-5 rounded-full text-white font-bold text-lg shadow-2xl">
+                    Apply Now →
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Curriculum -->
+    <section class="py-24 bg-gradient-to-br from-[#1a0f0f] to-[#0f0f0f]">
+        <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl sm:text-5xl font-black mb-4 text-white">What You'll Learn</h2>
+                <p class="text-xl text-gray-400">Master the tools and skills employers are looking for</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="light-card rounded-2xl p-6 shadow-lg hover-lift flex items-center gap-4">
+                    <div class="w-14 h-14 bg-brand-green rounded-xl flex items-center justify-center flex-shrink-0">
+                        <span class="text-2xl font-black text-white">📊</span>
+                    </div>
+                    <div class="font-bold text-lg text-gray-900">Excel for Business Analytics</div>
+                </div>
+
+                <div class="light-card rounded-2xl p-6 shadow-lg hover-lift flex items-center gap-4">
+                    <div class="w-14 h-14 bg-brand-purple rounded-xl flex items-center justify-center flex-shrink-0">
+                        <span class="text-2xl font-black text-white">📈</span>
+                    </div>
+                    <div class="font-bold text-lg text-gray-900">Statistics</div>
+                </div>
+
+                <div class="light-card rounded-2xl p-6 shadow-lg hover-lift flex items-center gap-4">
+                    <div class="w-14 h-14 bg-brand-red rounded-xl flex items-center justify-center flex-shrink-0">
+                        <span class="text-2xl font-black text-white">🔄</span>
+                    </div>
+                    <div class="font-bold text-lg text-gray-900">Power Query</div>
+                </div>
+
+                <div class="light-card rounded-2xl p-6 shadow-lg hover-lift flex items-center gap-4">
+                    <div class="w-14 h-14 bg-brand-orange rounded-xl flex items-center justify-center flex-shrink-0">
+                        <span class="text-2xl font-black text-white">📉</span>
+                    </div>
+                    <div class="font-bold text-lg text-gray-900">Tableau & Power BI</div>
+                </div>
+
+                <div class="light-card rounded-2xl p-6 shadow-lg hover-lift flex items-center gap-4">
+                    <div class="w-14 h-14 bg-brand-red rounded-xl flex items-center justify-center flex-shrink-0">
+                        <span class="text-2xl font-black text-white">🎨</span>
+                    </div>
+                    <div class="font-bold text-lg text-gray-900">Data Visualization & Storytelling</div>
+                </div>
+
+                <div class="light-card rounded-2xl p-6 shadow-lg hover-lift flex items-center gap-4">
+                    <div class="w-14 h-14 bg-brand-purple rounded-xl flex items-center justify-center flex-shrink-0">
+                        <span class="text-2xl font-black text-white">🗄️</span>
+                    </div>
+                    <div class="font-bold text-lg text-gray-900">SQL for Data Analysis</div>
+                </div>
+
+                <div class="light-card rounded-2xl p-6 shadow-lg hover-lift flex items-center gap-4">
+                    <div class="w-14 h-14 bg-brand-red rounded-xl flex items-center justify-center flex-shrink-0">
+                        <span class="text-2xl font-black text-white">📽️</span>
+                    </div>
+                    <div class="font-bold text-lg text-gray-900">PowerPoint Presentation</div>
+                </div>
+
+                <div class="light-card rounded-2xl p-6 shadow-lg hover-lift flex items-center gap-4">
+                    <div class="w-14 h-14 bg-brand-orange rounded-xl flex items-center justify-center flex-shrink-0">
+                        <span class="text-2xl font-black text-white">🐍</span>
+                    </div>
+                    <div class="font-bold text-lg text-gray-900">Python</div>
+                </div>
+
+                <div class="light-card rounded-2xl p-6 shadow-lg hover-lift flex items-center gap-4">
+                    <div class="w-14 h-14 bg-brand-green rounded-xl flex items-center justify-center flex-shrink-0">
+                        <span class="text-2xl font-black text-white">⚙️</span>
+                    </div>
+                    <div class="font-bold text-lg text-gray-900">Data Engineering</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Real Results - Testimonials -->
+    <section class="py-24 bg-[#0f0f0f]">
+        <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl sm:text-5xl font-black mb-4 text-white">Real Results From Real People</h2>
+                <p class="text-xl text-gray-400">Join hundreds who transformed their careers</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card dark-card rounded-3xl p-8 shadow-lg">
+                    <img src="pplimgs/Caitlin.webp" alt="Caitlin U."
+                        class="w-24 h-24 rounded-full mb-4 object-cover border-2 border-brand-red">
+                    <h4 class="text-xl font-black mb-2 text-white">Caitlin U.</h4>
+                    <p class="text-gray-400 leading-relaxed">Transitioned from a <span
+                            class="font-bold text-brand-orange">Teacher to Finance Analyst</span></p>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card dark-card rounded-3xl p-8 shadow-lg">
+                    <img src="pplimgs/Larita.webp" alt="Larita W."
+                        class="w-24 h-24 rounded-full mb-4 object-cover border-2 border-brand-red">
+                    <h4 class="text-xl font-black mb-2 text-white">Larita W.</h4>
+                    <p class="text-gray-400 leading-relaxed">Secured <span class="font-bold text-brand-orange">5 senior
+                            analyst job offers in under 60 days</span></p>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card dark-card rounded-3xl p-8 shadow-lg">
+                    <img src="pplimgs/Elleni.webp" alt="Elleni T."
+                        class="w-24 h-24 rounded-full mb-4 object-cover border-2 border-brand-red">
+                    <h4 class="text-xl font-black mb-2 text-white">Elleni T.</h4>
+                    <p class="text-gray-400 leading-relaxed">Got an <span class="font-bold text-brand-orange">analytics
+                            role in government in just 5 months</span></p>
+                </div>
+
+                <!-- Testimonial 4 -->
+                <div class="testimonial-card dark-card rounded-3xl p-8 shadow-lg">
+                    <img src="pplimgs/Jacinda.webp" alt="Jacinda L."
+                        class="w-24 h-24 rounded-full mb-4 object-cover border-2 border-brand-red">
+                    <h4 class="text-xl font-black mb-2 text-white">Jacinda L.</h4>
+                    <p class="text-gray-400 leading-relaxed">Transitioned from a <span
+                            class="font-bold text-brand-orange">truck driver to data analyst in 90 days</span></p>
+                </div>
+
+                <!-- Testimonial 5 -->
+                <div class="testimonial-card dark-card rounded-3xl p-8 shadow-lg">
+                    <img src="pplimgs/Tanya.webp" alt="Tanya C."
+                        class="w-24 h-24 rounded-full mb-4 object-cover border-2 border-brand-red">
+                    <h4 class="text-xl font-black mb-2 text-white">Tanya C.</h4>
+                    <p class="text-gray-400 leading-relaxed">Received a <span class="font-bold text-brand-orange">$20k
+                            pay raise</span></p>
+                </div>
+
+                <!-- Testimonial 6 -->
+                <div class="testimonial-card dark-card rounded-3xl p-8 shadow-lg">
+                    <img src="pplimgs/Ronnie.webp" alt="Ronnie S."
+                        class="w-24 h-24 rounded-full mb-4 object-cover border-2 border-brand-red">
+                    <h4 class="text-xl font-black mb-2 text-white">Ronnie S.</h4>
+                    <p class="text-gray-400 leading-relaxed">Landed a <span class="font-bold text-brand-orange">$95k
+                            business analyst role in 90 days</span></p>
+                </div>
+
+                <!-- Testimonial 7 -->
+                <div class="testimonial-card dark-card rounded-3xl p-8 shadow-lg">
+                    <img src="pplimgs/Amanda.webp" alt="Amanda L."
+                        class="w-24 h-24 rounded-full mb-4 object-cover border-2 border-brand-red">
+                    <h4 class="text-xl font-black mb-2 text-white">Amanda L.</h4>
+                    <p class="text-gray-400 leading-relaxed">Pivoted from <span
+                            class="font-bold text-brand-orange">teacher to academic research analyst</span></p>
+                </div>
+
+                <!-- Testimonial 8 -->
+                <div class="testimonial-card dark-card rounded-3xl p-8 shadow-lg">
+                    <img src="pplimgs/Kerristen.webp" alt="Kerristen B."
+                        class="w-24 h-24 rounded-full mb-4 object-cover border-2 border-brand-red">
+                    <h4 class="text-xl font-black mb-2 text-white">Kerristen B.</h4>
+                    <p class="text-gray-400 leading-relaxed">Transitioned from <span
+                            class="font-bold text-brand-orange">event assistant to data analyst</span></p>
+                </div>
+
+                <!-- Testimonial 9 -->
+                <div class="testimonial-card dark-card rounded-3xl p-8 shadow-lg">
+                    <img src="pplimgs/Hakeem.webp" alt="Hakeem L."
+                        class="w-24 h-24 rounded-full mb-4 object-cover border-2 border-brand-red">
+                    <h4 class="text-xl font-black mb-2 text-white">Hakeem L.</h4>
+                    <p class="text-gray-400 leading-relaxed">Pivoted from <span
+                            class="font-bold text-brand-orange">sales manager to business intelligence analyst</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <button onclick="scrollToApply()"
+                    class="btn-primary px-12 py-5 rounded-full text-white font-bold text-lg shadow-2xl">
+                    Apply Now to See if You Qualify →
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial Images Section -->
+    <section class="py-24 bg-gradient-to-br from-[#1a0f0f] to-[#0f0f0f]">
+        <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl sm:text-5xl font-black mb-4 text-white">What Our Students Say</h2>
+                <p class="text-xl text-gray-400">Real feedback from real people</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="hover-lift">
+                    <img src="pplcomnts/aa.webp" alt="Student testimonial" class="testimonial-image">
+                </div>
+                <div class="hover-lift">
+                    <img src="pplcomnts/bb.webp" alt="Student testimonial" class="testimonial-image">
+                </div>
+                <div class="hover-lift">
+                    <img src="pplcomnts/cc.webp" alt="Student testimonial" class="testimonial-image">
+                </div>
+                <div class="hover-lift">
+                    <img src="pplcomnts/dd.webp" alt="Student testimonial" class="testimonial-image">
+                </div>
+                <div class="hover-lift">
+                    <img src="pplcomnts/ee.webp" alt="Student testimonial" class="testimonial-image">
+                </div>
+                <div class="hover-lift">
+                    <img src="pplcomnts/ff.webp" alt="Student testimonial" class="testimonial-image">
+                </div>
+                <div class="hover-lift">
+                    <img src="pplcomnts/hh.png" alt="Student testimonial" class="testimonial-image">
+                </div>
+                <div class="hover-lift">
+                    <img src="pplcomnts/ii.webp" alt="Student testimonial" class="testimonial-image">
+                </div>
+                <div class="hover-lift">
+                    <img src="pplcomnts/jj.webp" alt="Student testimonial" class="testimonial-image">
+                </div>
+                <div class="hover-lift">
+                    <img src="pplcomnts/kk.webp" alt="Student testimonial" class="testimonial-image">
+                </div>
+                <div class="hover-lift">
+                    <img src="pplcomnts/ll.webp" alt="Student testimonial" class="testimonial-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 7: Student Spotlight - LaRita Williams with Videos -->
+    <section class="py-24 bg-[#0f0f0f]">
+        <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl sm:text-5xl font-black mb-4 text-white">Student Spotlight</h2>
+                <p class="text-xl text-gray-400">LaRita Williams' Journey to Success</p>
+            </div>
+
+            <!-- Video Testimonials Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                <div class="loom-embed shadow-2xl">
+                    <iframe
+                        src="https://www.loom.com/embed/0e355e33da77481faf2b72ac41a0371e?hide_owner=true&hide_share=true&hide_title=true&hideEmbedTopBar=true"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="loom-embed shadow-2xl">
+                    <iframe
+                        src="https://www.loom.com/embed/b17ce8668871494bf7f05b07d5f3893?hide_owner=true&hide_share=true&hide_title=true&hideEmbedTopBar=true"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="loom-embed shadow-2xl">
+                    <iframe
+                        src="https://www.loom.com/embed/be94ac8a4d5d404ea932d8c625580297?hide_owner=true&hide_share=true&hide_title=true&hideEmbedTopBar=true"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="loom-embed shadow-2xl">
+                    <iframe
+                        src="https://www.loom.com/embed/a1a46083e2434a488cd565f5005d736?hide_owner=true&hide_share=true&hide_title=true&hideEmbedTopBar=true"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="loom-embed shadow-2xl">
+                    <iframe
+                        src="https://www.loom.com/embed/50ec89e5d8064b119313d41f84d2a2b16?hide_owner=true&hide_share=true&hide_title=true&hideEmbedTopBar=true"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 items-start">
+                <!-- Video Testimonials -->
+                <div class="space-y-6">
+                    <div class="loom-embed shadow-2xl">
+                        <iframe
+                            src="https://www.loom.com/embed/d28d3b0e9f164e75a75a42958055e279?hide_owner=true&hide_share=true&hide_title=true&hideEmbedTopBar=true"
+                            allowfullscreen></iframe>
+                    </div>
+
+                    <div class="loom-embed-vertical max-w-xs mx-auto shadow-2xl">
+                        <iframe
+                            src="https://www.loom.com/embed/dde626095110486b9b086285eb9e2696?hide_owner=true&hide_share=true&hide_title=true&hideEmbedTopBar=true"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <!-- Q&A Content -->
+                <div class="space-y-6">
+                    <div class="dark-card rounded-3xl p-8 shadow-lg">
+                        <h3 class="font-black text-xl mb-3 text-brand-orange">What was your situation before joining?
+                        </h3>
+                        <p class="text-gray-300 leading-relaxed">Before joining DIM, I was a former classroom teacher
+                            and partnership director for an education nonprofit. I had recently been laid off and was
+                            using the transition time to self-teach in SQL, Python, and Tableau but needed feedback and
+                            guidance.</p>
+                    </div>
+
+                    <div class="dark-card rounded-3xl p-8 shadow-lg">
+                        <h3 class="font-black text-xl mb-3 text-brand-orange">What made you decide to join?</h3>
+                        <p class="text-gray-300 leading-relaxed">What stood out to me was definitely the people!
+                            Kedeisha took the time to meet me and understand my background, needs, and goals. She jumped
+                            in and started answering my questions and sharing advice right away.</p>
+                    </div>
+
+                    <div class="dark-card rounded-3xl p-8 shadow-lg">
+                        <h3 class="font-black text-xl mb-3 text-brand-orange">What results have you achieved?</h3>
+                        <p class="text-gray-300 leading-relaxed">About three months into the program, I had new projects
+                            for my portfolio, a resume and LinkedIn that I was proud of, dozens of successful job
+                            interviews, and <span class="font-black text-brand-orange">five data analyst job
+                                offers!</span> Not to mention newfound confidence and ability in my tech stack.</p>
+                    </div>
+
+                    <div class="dark-card rounded-3xl p-8 shadow-lg">
+                        <h3 class="font-black text-xl mb-3 text-brand-orange">What's your favorite part of the program?
+                        </h3>
+                        <p class="text-gray-300 leading-relaxed">My favorite part is the detailed and hands-on support.
+                            The DIM team was there to support me every step of the way for any question big or small and
+                            at pretty much any time of day.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 8: Meet Your Lead Instructor -->
+    <section class="py-24 bg-gradient-to-br from-[#1a0f0f] to-[#0f0f0f]">
+        <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl sm:text-5xl font-black mb-4 text-white">Meet Your Lead Instructor</h2>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
+                <!-- Image -->
+                <div class="order-2 lg:order-1">
+                    <div class="relative">
+                        <div
+                            class="absolute -inset-4 bg-gradient-to-br from-brand-red to-brand-orange rounded-3xl opacity-20 blur-2xl">
+                        </div>
+                        <div
+                            class="relative aspect-square bg-gradient-to-br from-brand-red to-brand-orange rounded-3xl overflow-hidden shadow-2xl">
+                            <div class="w-full h-full flex items-center justify-center text-white">
+                                <div class="text-center">
+                                    <div class="text-8xl font-black mb-4">KB</div>
+                                    <p class="text-xl font-bold">Kedeisha Bryan</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bio -->
+                <div class="order-1 lg:order-2 space-y-6">
+                    <h3 class="text-3xl font-black text-white">Kedeisha Bryan</h3>
+                    <p class="text-lg text-gray-300 leading-relaxed">
+                        Hi, I'm Kedeisha Bryan, a self-taught data scientist, career coach, and founder of Data in
+                        Motion. Three years ago, I was working warehouse shifts and delivering pizzas, making $8 an
+                        hour.
+                    </p>
+                    <p class="text-lg text-gray-300 leading-relaxed">
+                        Now, I lead a thriving community of over 55,000 aspiring and established data professionals,
+                        helping them break into and grow their data careers—without going back to school.
+                    </p>
+                    <p class="text-lg text-gray-300 leading-relaxed">
+                        I've helped professionals land offers at <span class="font-bold text-brand-orange">Microsoft,
+                            phData, the University of Texas at Austin, R+L Global Logistics</span>, and more. My
+                        coaching blends real-world data expertise, hands-on projects, and no-BS career strategies.
+                    </p>
+                    <p class="text-lg text-gray-300 leading-relaxed">
+                        Through my courses, coaching, and community, I'll help you build the skills, confidence, and
+                        personal brand needed to secure high-paying data analyst roles and accelerate your career.
+                    </p>
+
+                    <div class="flex gap-4 pt-4">
+                        <a href="https://www.linkedin.com/in/kedeisha-bryan/" target="_blank"
+                            class="px-6 py-3 bg-brand-red text-white font-bold rounded-full hover:bg-opacity-80 transition-all shadow-lg hover:shadow-xl">
+                            LinkedIn
+                        </a>
+                        <a href="https://www.youtube.com/@DataInMotion" target="_blank"
+                            class="px-6 py-3 bg-brand-orange text-white font-bold rounded-full hover:bg-opacity-80 transition-all shadow-lg hover:shadow-xl">
+                            YouTube
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section id="apply" class="py-32 gradient-bg relative overflow-hidden">
+        <div class="absolute inset-0 opacity-5">
+            <div class="absolute top-10 right-10 w-96 h-96 bg-brand-red rounded-full blur-3xl"></div>
+            <div class="absolute bottom-10 left-10 w-96 h-96 bg-brand-orange rounded-full blur-3xl"></div>
+        </div>
+
+        <div class="relative max-w-4xl mx-auto px-6 sm:px-8 lg:px-12 text-center text-white">
+            <h2 class="text-4xl sm:text-5xl lg:text-6xl font-black mb-6 leading-tight">
+                Ready to Start Your Data Career Journey?
+            </h2>
+            <p class="text-xl sm:text-2xl mb-10 text-gray-300 leading-relaxed">
+                Join 80,000+ professionals who chose to transform their careers with Data in Motion
+            </p>
+            <button class="btn-primary px-16 py-6 rounded-full text-white font-bold text-xl shadow-2xl">
+                Apply Now →
+            </button>
+            <p class="mt-6 text-gray-400">No degree or tech background required</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-12">
+        <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 text-center">
+            <div class="text-2xl font-black mb-4">Data in Motion</div>
+            <p class="text-gray-400 mb-6">Helping you break into data analytics and unlock your potential</p>
+            <div class="flex justify-center gap-6 mb-6">
+                <a href="https://www.linkedin.com/in/kedeisha-bryan/" target="_blank"
+                    class="text-gray-400 hover:text-white transition-colors">LinkedIn</a>
+                <a href="https://www.youtube.com/@DataInMotion" target="_blank"
+                    class="text-gray-400 hover:text-white transition-colors">YouTube</a>
+            </div>
+            <p class="text-sm text-gray-500">© 2025 Data in Motion. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll to apply section
+        function scrollToApply() {
+            document.getElementById('apply').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all cards and sections
+        document.addEventListener('DOMContentLoaded', () => {
+            const elements = document.querySelectorAll('.hover-lift, .testimonial-card, .feature-card');
+            elements.forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(30px)';
+                el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+
+</html>

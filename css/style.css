@@ -1,0 +1,179 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Apple-like Typography & Base (Dark Mode) */
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #000000;
+    color: #f5f5f7;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Animations */
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s cubic-bezier(0.165, 0.84, 0.44, 1), transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.fade-in-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Custom Utilities */
+.text-gradient {
+    background: linear-gradient(135deg, #ffffff 0%, #a1a1a6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.section-light {
+    background-color: #000000;
+    color: #f5f5f7;
+}
+
+.section-gray {
+    background-color: #0a0a0a;
+    color: #f5f5f7;
+}
+
+.section-dark {
+    background-color: #000000;
+    color: #f5f5f7;
+}
+
+/* Apple-style Button */
+.btn-apple {
+    background-color: #0071e3;
+    color: white;
+    border-radius: 980px;
+    /* Pill shape */
+    padding: 12px 24px;
+    font-size: 17px;
+    font-weight: 400;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.btn-apple:hover {
+    background-color: #0077ed;
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(0, 113, 227, 0.3);
+}
+
+/* Cards (Dark Mode) */
+.apple-card {
+    background: #1c1c1e;
+    border: 1px solid #2c2c2e;
+    border-radius: 20px;
+    color: #f5f5f7;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.apple-card:hover {
+    transform: scale(1.02);
+    background: #2c2c2e;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.dark-card {
+    background: #1c1c1e;
+    border: 1px solid #2c2c2e;
+    color: #f5f5f7;
+}
+
+/* Logo Scroll */
+.logo-scroll-container {
+    overflow: hidden;
+    position: relative;
+}
+
+.logo-scroll-container::before,
+.logo-scroll-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.logo-scroll-container::before {
+    left: 0;
+    background: linear-gradient(to right, #000000, transparent);
+}
+
+.logo-scroll-container::after {
+    right: 0;
+    background: linear-gradient(to left, #000000, transparent);
+}
+
+.logo-scroll {
+    display: flex;
+    width: max-content;
+    animation: scroll 40s linear infinite;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Masonry Grid */
+.masonry-grid {
+    column-count: 1;
+    column-gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+    .masonry-grid {
+        column-count: 2;
+    }
+}
+
+@media (min-width: 1024px) {
+    .masonry-grid {
+        column-count: 3;
+    }
+}
+
+.masonry-item {
+    break-inside: avoid;
+    margin-bottom: 1.5rem;
+}
+
+.testimonial-image {
+    width: 100%;
+    border-radius: 16px;
+    transition: transform 0.3s ease;
+    border: 1px solid #2c2c2e;
+}
+
+.testimonial-image:hover {
+    transform: scale(1.02);
+    border-color: #0071e3;
+}
+
+/* Video Container */
+.video-container {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    background: #000;
+    border: 1px solid #2c2c2e;
+}
