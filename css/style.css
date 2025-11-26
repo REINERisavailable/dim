@@ -32,7 +32,12 @@ html {
 .text-gradient {
     background: linear-gradient(135deg, #ffffff 0%, #a1a1a6 100%);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.text-blue-highlight {
+    color: #3b82f6;
 }
 
 .section-light {
@@ -52,43 +57,132 @@ html {
 
 /* Apple-style Button */
 .btn-apple {
-    background-color: #0071e3;
+    background-color: #3b82f6;
     color: white;
     border-radius: 980px;
-    /* Pill shape */
     padding: 12px 24px;
     font-size: 17px;
-    font-weight: 400;
+    font-weight: 500;
     transition: all 0.3s ease;
     border: 1px solid transparent;
 }
 
 .btn-apple:hover {
-    background-color: #0077ed;
+    background-color: #2563eb;
     transform: scale(1.02);
-    box-shadow: 0 4px 12px rgba(0, 113, 227, 0.3);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
 }
 
-/* Cards (Dark Mode) */
-.apple-card {
-    background: #1c1c1e;
-    border: 1px solid #2c2c2e;
+/* Navy Cards (Dynamous Style) */
+.navy-card {
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    border: 1px solid #334155;
     border-radius: 20px;
     color: #f5f5f7;
-    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
-.apple-card:hover {
-    transform: scale(1.02);
-    background: #2c2c2e;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+.navy-card:hover {
+    transform: translateY(-4px);
+    border-color: #3b82f6;
+    box-shadow: 0 8px 32px rgba(59, 130, 246, 0.2);
 }
 
-.dark-card {
-    background: #1c1c1e;
-    border: 1px solid #2c2c2e;
-    color: #f5f5f7;
+/* Stat Cards with Blue Border */
+.stat-card {
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    border: 1px solid #334155;
+    border-top: 3px solid #3b82f6;
+    border-radius: 16px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 32px rgba(59, 130, 246, 0.2);
+}
+
+/* Icon Badge */
+.icon-badge {
+    width: 48px;
+    height: 48px;
+    background: rgba(59, 130, 246, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Checkmark List */
+.check-item {
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    border: 1px solid #334155;
+    border-radius: 12px;
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    transition: all 0.3s ease;
+}
+
+.check-item:hover {
+    border-color: #3b82f6;
+    transform: translateX(4px);
+}
+
+.check-icon {
+    width: 20px;
+    height: 20px;
+    background: #3b82f6;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+/* FAQ Accordion */
+.faq-item {
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    border: 1px solid #334155;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+    border-color: #3b82f6;
+}
+
+.faq-question {
+    padding: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 500;
+    font-size: 1.125rem;
+}
+
+.faq-answer {
+    padding: 0 1.5rem 1.5rem;
+    color: #94a3b8;
+    line-height: 1.7;
+    display: none;
+}
+
+.faq-item.active .faq-answer {
+    display: block;
+}
+
+.faq-chevron {
+    transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-chevron {
+    transform: rotate(180deg);
 }
 
 /* Logo Scroll */
@@ -166,7 +260,7 @@ html {
 
 .testimonial-image:hover {
     transform: scale(1.02);
-    border-color: #0071e3;
+    border-color: #3b82f6;
 }
 
 /* Video Container */
@@ -175,7 +269,7 @@ html {
     overflow: hidden;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
     background: #000;
-    border: 1px solid #2c2c2e;
+    border: 1px solid #334155;
 }
 
 /* Instructor Image Fade */
