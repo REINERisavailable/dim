@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Career Blueprint - Launch Your Data Analytics Career</title>
+    <meta name="description"
+        content="Learn how to land a $90K+ Data Analytics Job without a degree or tech background. Join 80,000+ in the Data in Motion community.">
+    <link rel="icon" type="image/png" href="[REPLACE-WITH-GHL-URL-LOGO]">
+    
+    <!-- GHL TRACKING CODE -->
+    <!-- Paste your GHL tracking script here -->
+    <script>
+    // Your GHL tracking code will go here
+    // Get this from your GHL account settings
+    </script>
+    <!-- END GHL TRACKING CODE -->
+
+    <!-- TailwindCSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS (Inlined for GHL) -->
+    <style>
+
+/* Apple-like Typography & Base (Dark Mode) */
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #000000;
+    color: #f5f5f7;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Animations */
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s cubic-bezier(0.165, 0.84, 0.44, 1), transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.fade-in-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Custom Utilities */
+.text-gradient {
+    background: linear-gradient(135deg, #ffffff 0%, #a1a1a6 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.text-blue-highlight {
+    color: #3b82f6;
+}
+
+.text-highlight-underline {
+    color: #3b82f6;
+    position: relative;
+    display: inline-block;
+}
+
+.text-highlight-underline::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #3b82f6 0%, #60a5fa 100%);
+    border-radius: 2px;
+}
+
+.section-light {
+    background-color: #000000;
+    color: #f5f5f7;
+}
+
+.section-gray {
+    background-color: #0a0a0a;
+    color: #f5f5f7;
+}
+
+.section-dark {
+    background-color: #000000;
+    color: #f5f5f7;
+}
+
+/* Apple-style Button */
+.btn-apple {
+    background-color: #3b82f6;
+    color: white;
+    border-radius: 980px;
+    padding: 12px 24px;
+    font-size: 17px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.btn-apple:hover {
+    background-color: #2563eb;
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+}
+
+/* Navy Cards (Dynamous Style) */
+.navy-card {
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    border: 1px solid #334155;
+    border-radius: 20px;
+    color: #f5f5f7;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.navy-card:hover {
+    transform: translateY(-4px);
+    border-color: #3b82f6;
+    box-shadow: 0 8px 32px rgba(59, 130, 246, 0.2);
+}
+
+/* Stat Cards with Blue Border */
+.stat-card {
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    border: 1px solid #334155;
+    border-top: 3px solid #3b82f6;
+    border-radius: 16px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 32px rgba(59, 130, 246, 0.2);
+}
+
+/* Icon Badge */
+.icon-badge {
+    width: 48px;
+    height: 48px;
+    background: rgba(59, 130, 246, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Checkmark List */
+.check-item {
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    border: 1px solid #334155;
+    border-radius: 12px;
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    transition: all 0.3s ease;
+}
+
+.check-item:hover {
+    border-color: #3b82f6;
+    transform: translateX(4px);
+}
+
+.check-icon {
+    width: 20px;
+    height: 20px;
+    background: #3b82f6;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+/* FAQ Accordion */
+.faq-item {
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    border: 1px solid #334155;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+    border-color: #3b82f6;
+}
+
+.faq-question {
+    padding: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 500;
+    font-size: 1.125rem;
+}
+
+.faq-answer {
+    padding: 0 1.5rem 1.5rem;
+    color: #94a3b8;
+    line-height: 1.7;
+    display: none;
+}
+
+.faq-item.active .faq-answer {
+    display: block;
+}
+
+.faq-chevron {
+    transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-chevron {
+    transform: rotate(180deg);
+}
+
+/* Logo Scroll */
+.logo-scroll-container {
+    overflow: hidden;
+    position: relative;
+}
+
+.logo-scroll-container::before,
+.logo-scroll-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.logo-scroll-container::before {
+    left: 0;
+    background: linear-gradient(to right, #000000, transparent);
+}
+
+.logo-scroll-container::after {
+    right: 0;
+    background: linear-gradient(to left, #000000, transparent);
+}
+
+.logo-scroll {
+    display: flex;
+    width: max-content;
+    animation: scroll 40s linear infinite;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Masonry Grid */
+.masonry-grid {
+    column-count: 1;
+    column-gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+    .masonry-grid {
+        column-count: 2;
+    }
+}
+
+@media (min-width: 1024px) {
+    .masonry-grid {
+        column-count: 3;
+    }
+}
+
+.masonry-item {
+    break-inside: avoid;
+    margin-bottom: 1.5rem;
+}
+
+.testimonial-image {
+    width: 100%;
+    border-radius: 16px;
+    transition: transform 0.3s ease;
+    border: 1px solid #2c2c2e;
+}
+
+.testimonial-image:hover {
+    transform: scale(1.02);
+    border-color: #3b82f6;
+}
+
+/* Video Container */
+.video-container {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    background: #000;
+    border: 1px solid #334155;
+}
+
+/* Instructor Image Fade */
+.instructor-img-fade {
+    position: relative;
+}
+
+.instructor-img-fade::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 30%;
+    background: linear-gradient(to top, #000000 0%, transparent 100%);
+    pointer-events: none;
+}    </style>
+</head>
+
+<body class="bg-black text-[#f5f5f7]">
+
+    <!-- Navigation -->
+    <nav
+        class="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-md border-b border-gray-800 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 h-16 flex justify-between items-center">
+            <div class="flex items-center gap-8">
+                <a href="#" class="flex items-center">
+                    <img src="[REPLACE-WITH-GHL-URL-LOGO]" alt="Data in Motion" class="h-11 w-auto object-contain">
+                </a>
+                <div class="hidden md:flex gap-6 text-sm font-medium text-gray-300">
+                    <a href="#curriculum" class="hover:text-white transition-colors">Curriculum</a>
+                    <a href="#results" class="hover:text-white transition-colors">Results</a>
+                    <a href="#faq" class="hover:text-white transition-colors">FAQ</a>
+                    <a href="https://www.youtube.com/@kedeishabryan" target="_blank"
+                        class="hover:text-white transition-colors">YouTube</a>
+                    <a href="https://www.linkedin.com/in/kedeishabryan/" target="_blank"
+                        class="hover:text-white transition-colors">LinkedIn</a>
+                </div>
+            </div>
+            <div class="flex items-center gap-4">
+                <div class="flex md:hidden gap-4 text-gray-300">
+                    <a href="https://www.youtube.com/@kedeishabryan" target="_blank"><i
+                            class="fa-brands fa-youtube text-xl"></i></a>
+                    <a href="https://www.linkedin.com/in/kedeishabryan/" target="_blank"><i
+                            class="fa-brands fa-linkedin text-xl"></i></a>
+                </div>
+                <a href="#apply"  <!-- UPDATE THIS: Change to your GHL form page URL or use #apply for same-page form --> class="btn-apple text-sm">Apply Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center pt-32 pb-20 relative overflow-hidden section-dark">
+        <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 w-full grid lg:grid-cols-2 gap-16 items-center">
+            <div class="space-y-8 fade-in-up z-10">
+                <h1 class="text-5xl sm:text-7xl font-semibold tracking-tight leading-tight text-white">
+                    Launch your <br>
+                    <span class="text-blue-highlight">Data Career.</span>
+                </h1>
+                <p class="text-xl sm:text-2xl text-gray-400 font-normal max-w-lg leading-relaxed">
+                    The roadmap from zero to $90k+ data analyst in under 6 months. No degree required.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-5 pt-4 items-start sm:items-center">
+                    <a href="#apply"  <!-- UPDATE THIS: Change to your GHL form page URL or use #apply for same-page form --> class="btn-apple text-lg px-8 py-4 shadow-lg shadow-blue-500/20">
+                        Start Your Journey
+                    </a>
+                    <div class="flex items-center gap-3 px-4 py-2 bg-gray-900 rounded-full border border-gray-800">
+                        <div class="flex -space-x-3">
+                            <img src="[REPLACE-WITH-GHL-URL-HAKEEM]"
+                                class="w-8 h-8 rounded-full border-2 border-black object-cover">
+                            <img src="[REPLACE-WITH-GHL-URL-LARITA]"
+                                class="w-8 h-8 rounded-full border-2 border-black object-cover">
+                            <img src="[REPLACE-WITH-GHL-URL-CAITLIN]"
+                                class="w-8 h-8 rounded-full border-2 border-black object-cover">
+                        </div>
+                        <span class="text-sm text-gray-400 font-medium">Join 80,000+ others</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="video-container fade-in-up shadow-2xl" style="transition-delay: 0.2s;">
+                <div style="position: relative; padding-bottom: 56.25%; height: 0;">
+                    <iframe
+                        src="https://www.loom.com/embed/92396bfd470f4bbf805bfa5f57b72307?hide_owner=true&hide_share=true&hide_title=true&hideEmbedTopBar=true"
+                        frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen
+                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Challenges Section (Dark) -->
+    <section class="section-dark py-32 border-t border-gray-900">
+        <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+            <div class="text-center mb-20 fade-in-up">
+                <h2 class="text-4xl sm:text-5xl font-semibold mb-6 text-white">Are These <span
+                        class="text-blue-highlight">Challenges</span> Holding You Back?</h2>
+                <p class="text-xl text-gray-400 font-normal max-w-3xl mx-auto">You're not alone. These are the top
+                    struggles aspiring data professionals face.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Challenge 1 -->
+                <div class="navy-card p-8 fade-in-up">
+                    <div class="icon-badge mb-6 mx-auto">
+                        <i class="fa-solid fa-ban text-2xl text-red-400"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 text-white text-center">The Experience Paradox</h3>
+                    <p class="text-gray-300 leading-relaxed text-center">Every "entry-level" job requires 3+ years of
+                        experience. You can't get hired without experience, but can't get experience without being
+                        hired.</p>
+                </div>
+
+                <!-- Challenge 2 -->
+                <div class="navy-card p-8 fade-in-up" style="transition-delay: 0.1s;">
+                    <div class="icon-badge mb-6 mx-auto">
+                        <i class="fa-solid fa-infinity text-2xl text-orange-400"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 text-white text-center">Tutorial Hell</h3>
+                    <p class="text-gray-300 leading-relaxed text-center">You've watched countless courses and feel
+                        productive, but when faced with a real problem, your mind goes blank. Knowing syntax isn't the
+                        same as solving problems.</p>
+                </div>
+
+                <!-- Challenge 3 -->
+                <div class="navy-card p-8 fade-in-up" style="transition-delay: 0.2s;">
+                    <div class="icon-badge mb-6 mx-auto">
+                        <i class="fa-solid fa-ghost text-2xl text-yellow-400"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 text-white text-center">Application Black Hole</h3>
+                    <p class="text-gray-300 leading-relaxed text-center">You send 100+ applications and hear nothing
+                        back. Your resume gets filtered out by ATS systems before a human even sees it.</p>
+                </div>
+            </div>
+
+            <div class="text-center mt-16 fade-in-up">
+                <p class="text-2xl text-gray-300 mb-8">We've helped <span
+                        class="text-blue-highlight font-semibold">thousands</span> break through these exact barriers.
+                </p>
+                <a href="#apply"  <!-- UPDATE THIS: Change to your GHL form page URL or use #apply for same-page form --> class="btn-apple text-lg px-10 py-4 shadow-xl shadow-blue-500/20">
+                    Break Free Today
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section (Dark) -->
+    <section class="section-dark py-24">
+        <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+            <div class="text-center mb-16 fade-in-up">
+                <h2 class="text-4xl font-semibold mb-4 text-white">Unlock <span
+                        class="text-blue-highlight">High-Paying</span> Roles</h2>
+                <p class="text-gray-400 text-lg">Based on 2025 Industry Standards</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="stat-card text-center fade-in-up">
+                    <div class="text-4xl font-semibold mb-2 text-blue-highlight">$78K</div>
+                    <div class="text-xs font-semibold text-gray-400 uppercase tracking-widest">Data Analyst</div>
+                </div>
+                <div class="stat-card text-center fade-in-up" style="transition-delay: 0.1s;">
+                    <div class="text-4xl font-semibold mb-2 text-blue-highlight">$102K</div>
+                    <div class="text-xs font-semibold text-gray-400 uppercase tracking-widest">BI Developer</div>
+                </div>
+                <div class="stat-card text-center fade-in-up" style="transition-delay: 0.2s;">
+                    <div class="text-4xl font-semibold mb-2 text-blue-highlight">$85K</div>
+                    <div class="text-xs font-semibold text-gray-400 uppercase tracking-widest">Business Analyst</div>
+                </div>
+                <div class="stat-card text-center fade-in-up" style="transition-delay: 0.3s;">
+                    <div class="text-4xl font-semibold mb-2 text-blue-highlight">$118K</div>
+                    <div class="text-xs font-semibold text-gray-400 uppercase tracking-widest">Analytics Engineer</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Logo Grid (Dark) -->
+    <section class="section-dark py-16 border-t border-gray-900">
+        <div class="max-w-7xl mx-auto px-6 text-center mb-10">
+            <p class="text-sm font-semibold text-gray-500 uppercase tracking-widest">Graduates Hired By</p>
+        </div>
+        <div class="logo-scroll-container">
+            <div class="logo-scroll">
+                <div
+                    class="flex items-center gap-0 min-w-max grayscale opacity-50 hover:opacity-100 transition-opacity duration-500">
+                    <img src="[REPLACE-WITH-GHL-URL-LOGO1]" class="h-40 object-contain brightness-0 invert">
+                    <img src="[REPLACE-WITH-GHL-URL-LOGO2]" class="h-40 object-contain brightness-0 invert">
+                    <img src="[REPLACE-WITH-GHL-URL-LOGO3]" class="h-40 object-contain brightness-0 invert">
+                    <img src="[REPLACE-WITH-GHL-URL-LOGO1]" class="h-40 object-contain brightness-0 invert">
+                    <img src="[REPLACE-WITH-GHL-URL-LOGO2]" class="h-40 object-contain brightness-0 invert">
+                    <img src="[REPLACE-WITH-GHL-URL-LOGO3]" class="h-40 object-contain brightness-0 invert">
+                    <img src="[REPLACE-WITH-GHL-URL-LOGO1]" class="h-40 object-contain brightness-0 invert">
+                    <img src="[REPLACE-WITH-GHL-URL-LOGO2]" class="h-40 object-contain brightness-0 invert">
+                    <img src="[REPLACE-WITH-GHL-URL-LOGO3]" class="h-40 object-contain brightness-0 invert">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Join (Dark) -->
+    <section class="section-dark py-32">
+        <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+            <div class="mb-24 fade-in-up">
+                <h2 class="text-4xl sm:text-5xl font-semibold mb-6">Why <span class="text-blue-highlight">Data Career
+                        Launch?</span></h2>
+                <p class="text-xl text-gray-400 max-w-2xl font-normal">We don't just teach skills. We engineer careers.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="navy-card p-10 fade-in-up">
+                    <div
+                        class="w-12 h-12 bg-blue-500/10 rounded-2xl flex items-center justify-center mb-6 text-blue-400">
+                        <i class="fa-solid fa-layer-group text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-white">In-Demand Skills</h3>
+                    <p class="text-gray-400 leading-relaxed text-sm">Master Excel, SQL, Tableau, and Python through
+                        projects that mimic real workplace scenarios.</p>
+                </div>
+                <!-- Feature 2 -->
+                <div class="navy-card p-10 fade-in-up" style="transition-delay: 0.1s;">
+                    <div class="w-12 h-12 bg-red-500/10 rounded-2xl flex items-center justify-center mb-6 text-red-400">
+                        <i class="fa-solid fa-user-tie text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-white">Unlimited Coaching</h3>
+                    <p class="text-gray-400 leading-relaxed text-sm">Direct access to mentors who are currently working
+                        in the field and know the hiring landscape.</p>
+                </div>
+                <!-- Feature 3 -->
+                <div class="navy-card p-10 fade-in-up" style="transition-delay: 0.2s;">
+                    <div
+                        class="w-12 h-12 bg-orange-500/10 rounded-2xl flex items-center justify-center mb-6 text-orange-400">
+                        <i class="fa-solid fa-sack-dollar text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-white">Salary Increase</h3>
+                    <p class="text-gray-400 leading-relaxed text-sm">Our graduates consistently secure roles paying
+                        $20k-$50k more than their previous jobs.</p>
+                </div>
+                <!-- Feature 4 -->
+                <div class="navy-card p-10 fade-in-up">
+                    <div
+                        class="w-12 h-12 bg-purple-500/10 rounded-2xl flex items-center justify-center mb-6 text-purple-400">
+                        <i class="fa-solid fa-briefcase text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-white">Real Internship</h3>
+                    <p class="text-gray-400 leading-relaxed text-sm">Gain legitimate experience to put on your resume,
+                        bridging the gap between learning and working.</p>
+                </div>
+                <!-- Feature 5 -->
+                <div class="navy-card p-10 fade-in-up" style="transition-delay: 0.1s;">
+                    <div
+                        class="w-12 h-12 bg-teal-500/10 rounded-2xl flex items-center justify-center mb-6 text-teal-400">
+                        <i class="fa-solid fa-rocket text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-white">Fast-Track Hiring</h3>
+                    <p class="text-gray-400 leading-relaxed text-sm">Strategic interview prep and branding to get you in
+                        front of recruiters in under 6 months.</p>
+                </div>
+                <!-- Feature 6 -->
+                <div class="navy-card p-10 fade-in-up" style="transition-delay: 0.2s;">
+                    <div
+                        class="w-12 h-12 bg-pink-500/10 rounded-2xl flex items-center justify-center mb-6 text-pink-400">
+                        <i class="fa-solid fa-infinity text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-white">Lifetime Support</h3>
+                    <p class="text-gray-400 leading-relaxed text-sm">We don't stop when you get hired. We support your
+                        career growth for the long haul.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Curriculum (Dark) -->
+    <section class="section-dark py-32">
+        <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+            <div class="text-center mb-20 fade-in-up">
+                <h2 class="text-4xl font-semibold mb-4 text-white">What You'll <span
+                        class="text-blue-highlight">Learn</span></h2>
+                <p class="text-gray-400 text-lg">Master the essential skills to launch your data career.</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                <div class="check-item fade-in-up">
+                    <i class="fa-solid fa-table text-3xl text-green-500 mb-4"></i>
+                    <div class="font-medium text-white">Excel</div>
+                </div>
+                <div class="check-item fade-in-up" style="transition-delay: 0.05s;">
+                    <i class="fa-solid fa-chart-line text-3xl text-blue-500 mb-4"></i>
+                    <div class="font-medium text-white">Statistics</div>
+                </div>
+                <div class="check-item fade-in-up" style="transition-delay: 0.1s;">
+                    <i class="fa-solid fa-database text-3xl text-gray-400 mb-4"></i>
+                    <div class="font-medium text-white">SQL</div>
+                </div>
+                <div class="check-item fade-in-up" style="transition-delay: 0.15s;">
+                    <i class="fa-brands fa-python text-3xl text-yellow-400 mb-4"></i>
+                    <div class="font-medium text-white">Python</div>
+                </div>
+                <div class="check-item fade-in-up" style="transition-delay: 0.2s;">
+                    <i class="fa-solid fa-chart-pie text-3xl text-orange-500 mb-4"></i>
+                    <div class="font-medium text-white">Tableau</div>
+                </div>
+                <div class="check-item fade-in-up" style="transition-delay: 0.25s;">
+                    <i class="fa-solid fa-bolt text-3xl text-yellow-600 mb-4"></i>
+                    <div class="font-medium text-white">Power BI</div>
+                </div>
+                <div class="check-item fade-in-up" style="transition-delay: 0.3s;">
+                    <i class="fa-solid fa-filter text-3xl text-teal-500 mb-4"></i>
+                    <div class="font-medium text-white">Power Query</div>
+                </div>
+                <div class="check-item fade-in-up" style="transition-delay: 0.35s;">
+                    <i class="fa-solid fa-book-open text-3xl text-red-500 mb-4"></i>
+                    <div class="font-medium text-white">Storytelling</div>
+                </div>
+                <div class="check-item fade-in-up" style="transition-delay: 0.4s;">
+                    <i class="fa-solid fa-server text-3xl text-purple-500 mb-4"></i>
+                    <div class="font-medium text-white">Data Eng</div>
+                </div>
+                <div class="check-item fade-in-up" style="transition-delay: 0.45s;">
+                    <i class="fa-solid fa-file-powerpoint text-3xl text-red-600 mb-4"></i>
+                    <div class="font-medium text-white">Presenting</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Real Results (Dark) -->
+    <section class="section-dark py-32">
+        <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+            <div class="text-center mb-24 fade-in-up">
+                <h2 class="text-4xl sm:text-5xl font-semibold mb-6 text-white"><span
+                        class="text-blue-highlight">Real</span> Results.</h2>
+                <p class="text-xl text-gray-400 font-normal">Join hundreds who transformed their careers.</p>
+            </div>
+
+            <!-- Testimonial Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-24">
+                <!-- Caitlin -->
+                <div class="navy-card p-8 fade-in-up flex flex-col justify-between h-full">
+                    <div>
+                        <div class="flex items-center gap-4 mb-6">
+                            <img src="[REPLACE-WITH-GHL-URL-CAITLIN]"
+                                class="w-14 h-14 rounded-full object-cover border border-gray-700">
+                            <div>
+                                <h4 class="font-semibold text-lg text-white">Caitlin U.</h4>
+                                <p class="text-xs text-gray-400 uppercase tracking-wide">Finance Analyst</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 leading-relaxed">"Transitioned from a Teacher to Finance Analyst."</p>
+                    </div>
+                </div>
+
+                <!-- Larita -->
+                <div class="navy-card p-8 fade-in-up flex flex-col justify-between h-full"
+                    style="transition-delay: 0.1s;">
+                    <div>
+                        <div class="flex items-center gap-4 mb-6">
+                            <img src="[REPLACE-WITH-GHL-URL-LARITA]"
+                                class="w-14 h-14 rounded-full object-cover border border-gray-700">
+                            <div>
+                                <h4 class="font-semibold text-lg text-white">Larita W.</h4>
+                                <p class="text-xs text-gray-400 uppercase tracking-wide">Data Analyst</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 leading-relaxed">"Secured 5 senior analyst job offers in under 60 days."
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Elleni -->
+                <div class="navy-card p-8 fade-in-up flex flex-col justify-between h-full"
+                    style="transition-delay: 0.2s;">
+                    <div>
+                        <div class="flex items-center gap-4 mb-6">
+                            <img src="[REPLACE-WITH-GHL-URL-ELLENI]"
+                                class="w-14 h-14 rounded-full object-cover border border-gray-700">
+                            <div>
+                                <h4 class="font-semibold text-lg text-white">Elleni T.</h4>
+                                <p class="text-xs text-gray-400 uppercase tracking-wide">Government Role</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 leading-relaxed">"Got an analytics role in government in just 5 months."
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Jacinda -->
+                <div class="navy-card p-8 fade-in-up flex flex-col justify-between h-full">
+                    <div>
+                        <div class="flex items-center gap-4 mb-6">
+                            <img src="[REPLACE-WITH-GHL-URL-JACINDA]"
+                                class="w-14 h-14 rounded-full object-cover border border-gray-700">
+                            <div>
+                                <h4 class="font-semibold text-lg text-white">Jacinda L.</h4>
+                                <p class="text-xs text-gray-400 uppercase tracking-wide">Data Analyst</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 leading-relaxed">"Transitioned from a truck driver to data analyst in 90
+                            days."</p>
+                    </div>
+                </div>
+
+                <!-- Tanya -->
+                <div class="navy-card p-8 fade-in-up flex flex-col justify-between h-full"
+                    style="transition-delay: 0.1s;">
+                    <div>
+                        <div class="flex items-center gap-4 mb-6">
+                            <img src="[REPLACE-WITH-GHL-URL-TANYA]"
+                                class="w-14 h-14 rounded-full object-cover border border-gray-700">
+                            <div>
+                                <h4 class="font-semibold text-lg text-white">Tanya C.</h4>
+                                <p class="text-xs text-gray-400 uppercase tracking-wide">Pay Raise</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 leading-relaxed">"Received a $20k pay raise."</p>
+                    </div>
+                </div>
+
+                <!-- Ronnie -->
+                <div class="navy-card p-8 fade-in-up flex flex-col justify-between h-full"
+                    style="transition-delay: 0.2s;">
+                    <div>
+                        <div class="flex items-center gap-4 mb-6">
+                            <img src="[REPLACE-WITH-GHL-URL-RONNIE]"
+                                class="w-14 h-14 rounded-full object-cover border border-gray-700">
+                            <div>
+                                <h4 class="font-semibold text-lg text-white">Ronnie S.</h4>
+                                <p class="text-xs text-gray-400 uppercase tracking-wide">Business Analyst</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 leading-relaxed">"Landed a $95k business analyst role in 90 days."</p>
+                    </div>
+                </div>
+
+                <!-- Amanda -->
+                <div class="navy-card p-8 fade-in-up flex flex-col justify-between h-full">
+                    <div>
+                        <div class="flex items-center gap-4 mb-6">
+                            <img src="[REPLACE-WITH-GHL-URL-AMANDA]"
+                                class="w-14 h-14 rounded-full object-cover border border-gray-700">
+                            <div>
+                                <h4 class="font-semibold text-lg text-white">Amanda L.</h4>
+                                <p class="text-xs text-gray-400 uppercase tracking-wide">Research Analyst</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 leading-relaxed">"Pivoted from teacher to academic research analyst."
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Kerristen -->
+                <div class="navy-card p-8 fade-in-up flex flex-col justify-between h-full"
+                    style="transition-delay: 0.1s;">
+                    <div>
+                        <div class="flex items-center gap-4 mb-6">
+                            <img src="[REPLACE-WITH-GHL-URL-KERRISTEN]"
+                                class="w-14 h-14 rounded-full object-cover border border-gray-700">
+                            <div>
+                                <h4 class="font-semibold text-lg text-white">Kerristen B.</h4>
+                                <p class="text-xs text-gray-400 uppercase tracking-wide">Data Analyst</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 leading-relaxed">"Transitioned from event assistant to data analyst."
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Hakeem -->
+                <div class="navy-card p-8 fade-in-up flex flex-col justify-between h-full"
+                    style="transition-delay: 0.2s;">
+                    <div>
+                        <div class="flex items-center gap-4 mb-6">
+                            <img src="[REPLACE-WITH-GHL-URL-HAKEEM]"
+                                class="w-14 h-14 rounded-full object-cover border border-gray-700">
+                            <div>
+                                <h4 class="font-semibold text-lg text-white">Hakeem L.</h4>
+                                <p class="text-xs text-gray-400 uppercase tracking-wide">BI Analyst</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 leading-relaxed">"Pivoted from sales manager to business intelligence
+                            analyst."</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Masonry Grid -->
+            <h3 class="text-2xl font-semibold text-center mb-12 fade-in-up text-white">Community Wins</h3>
+            <div class="masonry-grid fade-in-up">
+                <div class="masonry-item"><img src="[REPLACE-WITH-GHL-URL-COMMENT-AA]" class="testimonial-image"></div>
+                <div class="masonry-item"><img src="[REPLACE-WITH-GHL-URL-COMMENT-BB]" class="testimonial-image"></div>
+                <div class="masonry-item"><img src="[REPLACE-WITH-GHL-URL-COMMENT-CC]" class="testimonial-image"></div>
+                <div class="masonry-item"><img src="[REPLACE-WITH-GHL-URL-COMMENT-DD]" class="testimonial-image"></div>
+                <div class="masonry-item"><img src="[REPLACE-WITH-GHL-URL-COMMENT-EE]" class="testimonial-image"></div>
+                <div class="masonry-item"><img src="[REPLACE-WITH-GHL-URL-COMMENT-FF]" class="testimonial-image"></div>
+                <div class="masonry-item"><img src="[REPLACE-WITH-GHL-URL-COMMENT-HH]" class="testimonial-image"></div>
+                <div class="masonry-item"><img src="[REPLACE-WITH-GHL-URL-COMMENT-II]" class="testimonial-image"></div>
+                <div class="masonry-item"><img src="[REPLACE-WITH-GHL-URL-COMMENT-JJ]" class="testimonial-image"></div>
+                <div class="masonry-item"><img src="[REPLACE-WITH-GHL-URL-COMMENT-KK]" class="testimonial-image"></div>
+                <div class="masonry-item"><img src="[REPLACE-WITH-GHL-URL-COMMENT-LL]" class="testimonial-image"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Student Spotlight (Dark) -->
+    <section class="section-dark py-32">
+        <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+            <div class="text-center mb-16 fade-in-up">
+                <h2 class="text-4xl font-semibold mb-4 text-white">Student Spotlight</h2>
+                <p class="text-gray-400 text-lg">LaRita Williams: From layoff to 5 job offers.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="row-span-2 video-container fade-in-up">
+                    <div style="position: relative; padding-bottom: 177.78%; height: 0;">
+                        <iframe
+                            src="https://www.loom.com/embed/dde626095110486b9b086285eb9e2696?hide_owner=true&hide_share=true&hide_title=true&hideEmbedTopBar=true"
+                            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" frameborder="0"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="video-container fade-in-up" style="transition-delay: 0.1s;">
+                    <div style="position: relative; padding-bottom: 56.25%; height: 0;">
+                        <iframe
+                            src="https://www.loom.com/embed/d28d3b0e9f164e75a75a42958055e279?hide_owner=true&hide_share=true&hide_title=true&hideEmbedTopBar=true"
+                            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" frameborder="0"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="video-container fade-in-up" style="transition-delay: 0.2s;">
+                    <div style="position: relative; padding-bottom: 56.25%; height: 0;">
+                        <iframe
+                            src="https://www.loom.com/embed/0e355e33da77481faf2b72ac41a0371e?hide_owner=true&hide_share=true&hide_title=true&hideEmbedTopBar=true"
+                            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" frameborder="0"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="video-container fade-in-up" style="transition-delay: 0.3s;">
+                    <div style="position: relative; padding-bottom: 56.25%; height: 0;">
+                        <iframe
+                            src="https://www.loom.com/embed/b17ce8668871494bf7f05b07d5f3893?hide_owner=true&hide_share=true&hide_title=true&hideEmbedTopBar=true"
+                            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" frameborder="0"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="video-container fade-in-up" style="transition-delay: 0.4s;">
+                    <div style="position: relative; padding-bottom: 56.25%; height: 0;">
+                        <iframe
+                            src="https://www.loom.com/embed/be94ac8a4d5d404ea932d8c625580297?hide_owner=true&hide_share=true&hide_title=true&hideEmbedTopBar=true"
+                            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" frameborder="0"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instructor (Dark) -->
+    <section class="section-dark py-24 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="order-2 lg:order-1 fade-in-up relative">
+                    <!-- Glow effect -->
+                    <div class="absolute inset-0 bg-blue-500/20 blur-3xl rounded-full"></div>
+                    <div class="relative z-10 instructor-img-fade">
+                        <img src="[REPLACE-WITH-GHL-URL-INSTRUCTOR]" class="w-full max-w-md mx-auto drop-shadow-2xl">
+                    </div>
+                </div>
+                <div class="order-1 lg:order-2 space-y-8 fade-in-up">
+                    <div>
+                        <h2 class="text-4xl sm:text-5xl font-semibold mb-2 text-white">Kedeisha Bryan</h2>
+                        <p class="text-[#0071e3] font-medium text-xl">Founder & Lead Instructor</p>
+                    </div>
+                    <div class="space-y-6 text-gray-400 text-lg leading-relaxed font-light">
+                        <p>Three years ago, I was working warehouse shifts and delivering pizzas, making $8 an hour.
+                            Now, I lead a thriving community of over 55,000 aspiring and established data professionals.
+                        </p>
+                        <p>I've helped professionals land offers at <strong class="text-white font-medium">Microsoft,
+                                phData, University of Texas</strong>, and more.</p>
+                    </div>
+                    <div class="flex gap-6 pt-4">
+                        <a href="https://www.linkedin.com/in/kedeishabryan/" target="_blank"
+                            class="text-gray-400 hover:text-white transition-colors text-2xl"><i
+                                class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.youtube.com/@kedeishabryan" target="_blank"
+                            class="text-gray-400 hover:text-white transition-colors text-2xl"><i
+                                class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section (Dark) -->
+    <section class="section-dark py-32">
+        <div class="max-w-4xl mx-auto px-6 sm:px-8 lg:px-12">
+            <div class="text-center mb-16 fade-in-up">
+                <h2 class="text-4xl sm:text-5xl font-semibold mb-6 text-white">Frequently Asked <span
+                        class="text-blue-highlight">Questions</span></h2>
+                <p class="text-xl text-gray-400">Get answers to the most common questions about our data career program.
+                </p>
+            </div>
+
+            <div class="space-y-4 fade-in-up">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Do I need a degree or tech background?</span>
+                        <i class="fa-solid fa-chevron-down faq-chevron text-gray-400"></i>
+                    </div>
+                    <div class="faq-answer">
+                        No! Our program is specifically designed for career changers with no technical background. We
+                        start from the basics and build up your skills systematically. Many of our most successful
+                        graduates came from teaching, retail, hospitality, and other non-tech fields.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How long does it take to complete?</span>
+                        <i class="fa-solid fa-chevron-down faq-chevron text-gray-400"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Most students complete the program in 4-6 months while working full-time. The curriculum is
+                        self-paced, so you can move faster or slower based on your schedule and learning pace.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What kind of support do I get?</span>
+                        <i class="fa-solid fa-chevron-down faq-chevron text-gray-400"></i>
+                    </div>
+                    <div class="faq-answer">
+                        You get unlimited access to our coaching team, weekly live Q&A sessions, a private community of
+                        80,000+ members, resume reviews, interview prep, and personalized career guidance. We're with
+                        you every step of the way.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Will I get real work experience?</span>
+                        <i class="fa-solid fa-chevron-down faq-chevron text-gray-400"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Yes! Our program includes a real internship where you'll work on actual data projects. This
+                        gives you legitimate experience to put on your resume and talk about in interviews.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What if I can't find a job after completing?</span>
+                        <i class="fa-solid fa-chevron-down faq-chevron text-gray-400"></i>
+                    </div>
+                    <div class="faq-answer">
+                        We provide lifetime support. If you don't land a role right away, we'll continue working with
+                        you on your resume, interview skills, and job search strategy until you do. Our graduates have a
+                        94% placement rate within 6 months.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA (Dark) -->
+    <section class="section-dark py-32 text-center">
+        <div class="max-w-4xl mx-auto px-6 fade-in-up">
+            <h2 class="text-5xl sm:text-6xl font-semibold mb-8 text-white">Ready to <span
+                    class="text-blue-highlight">Launch?</span></h2>
+            <a href="#apply"  <!-- UPDATE THIS: Change to your GHL form page URL or use #apply for same-page form --> class="btn-apple text-xl px-12 py-5 inline-block shadow-xl shadow-blue-500/20">
+                Apply Now
+            </a>
+            <p class="mt-8 text-gray-500 text-sm">Join 80,000+ professionals in the Data in Motion community</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-16 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <img src="[REPLACE-WITH-GHL-URL-LOGO]" class="h-10 mx-auto mb-6 opacity-70 brightness-0 ">
+            <p class="text-gray-400 text-base font-medium">© 2025 Data in Motion. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Custom JavaScript (Inlined for GHL) -->
+    <script>
+// Intersection Observer for Fade-in Animations
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target); // Only animate once
+        }
+    });
+}, observerOptions);
+
+document.addEventListener('DOMContentLoaded', () => {
+    const elements = document.querySelectorAll('.fade-in-up');
+    elements.forEach(el => {
+        observer.observe(el);
+    });
+
+    // FAQ Accordion
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        question.addEventListener('click', () => {
+            // Close other items
+            faqItems.forEach(otherItem => {
+                if (otherItem !== item) {
+                    otherItem.classList.remove('active');
+                }
+            });
+            // Toggle current item
+            item.classList.toggle('active');
+        });
+    });
+});
+    </script>
+</body>
+
+</html>
